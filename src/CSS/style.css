@@ -1,0 +1,817 @@
+@import url(reset.css);
+@import url(theme.css);
+*
+{
+    transition: 0.7s;
+}
+body
+{
+    width: 100vw;
+    max-width: 100%;
+    background-color: var(--primary-bg-color);
+}
+/* Containers */
+/* Body Container */
+.body__container
+{
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header__container
+{
+    height: 7vh;
+    width: 100vw;
+    max-width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-bg-color);
+    border-bottom: 3px solid var(--primary-border-color);
+}
+/* Header Divs */
+.header__container nav,
+.header__container div
+{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+/* Desktop Nav Bar */
+.nav--desktop
+{
+    padding-left: 0.75rem;
+    justify-content: flex-start;
+}
+.menu--desktop
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+.desktop__link:hover
+{
+    color: var(--secondary-color)
+}
+/* Logo Div */
+.header__logo
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+}
+.logo, .logo__span
+{
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+/* Theme Menu Div */
+.header__menu--theme
+{
+    padding-right: 0.75rem;
+    justify-content: flex-end;
+}
+.btn__theme
+{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.btn__theme:hover
+{
+    color: var(--secondary-color);
+    transition: 0.3s ease-in-out;
+}
+/* Mobile Menu */
+.nav--mobile
+{
+    height: 8.5vh;
+    width: 100vw;
+    max-width: 100%;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-bg-color);
+    border-top: 3px solid var(--primary-border-color);
+}
+.menu--mobile
+{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mobile__item
+{
+    height: 100%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--primary-border-color);
+}
+.mobile__item:hover
+{
+    cursor: pointer;
+}
+.mobile__item:hover i,
+.mobile__item:hover span
+{
+    color: var(--secondary-color);
+}
+.mobile__link
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.link__logo
+{
+    font-size: 1.5rem;
+}
+/* Main Container */
+.main__container
+{
+    width: 100%;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+}
+/* Home Section */
+.home
+{
+    min-height: 81.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* Home Content */
+.home__content
+{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
+}
+.home__content h1
+{
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.home__content p
+{
+    margin-bottom: .5rem;
+}
+.menu--social
+{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.social__link:hover .social__icon
+{
+    color: var(--secondary-color);
+}
+.social__icon
+{
+    font-size: 1.5rem;
+}
+.btn__home
+{
+    height: 3.5rem;
+    width: 14rem;
+    align-self: center;
+    margin: 0 auto;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    border: 3px solid var(--secondary-bg-color);
+    border-radius: 10rem;
+}
+.btn__home:hover
+{
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+.btn__home:hover span,
+.btn__home:hover i
+{
+    color: var(--primary-bg-color);
+} 
+.btn__home span
+{
+    font-size: 1.25rem;
+    color: var(--primary-color);
+}
+.btn__home i
+{
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+/* Home Technologies */
+.home__technologies
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary-bg-color);
+    border-radius: .2rem;
+    
+}
+.home__technologies h2
+{
+    margin: 2rem 0;
+    text-align: center;
+}
+.technologies__list
+{
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.technologies__item
+{
+    height: 6rem;
+    width: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: .2rem solid #333;
+    border-radius: 50%;
+}
+.technologies__logo
+{
+    height: 3.5rem;
+    width: 3.5rem;
+}
+/* Projects Section */
+.projects
+{
+    width: 100%;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.projects__container
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.projects__container h2
+{
+    align-self: center;
+    margin-bottom: 2rem;
+}
+.projects__card
+{
+    min-height: 81.5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card__cover
+{
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card__image
+{
+    font-size: 10rem;
+    padding: 1rem 6rem;
+    background-color: #CCC;
+    border: .2rem solid var(--secondary-border-color);
+    border-radius: 2px;
+}
+.card__body
+{
+    width: 22.4rem;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+}
+.card__title
+{
+    text-align: center;
+}
+.card__description
+{
+    margin-top: 1rem;
+    text-align: justify;
+}
+.card__list
+{
+    margin: 1rem 1rem;
+}
+.card__features
+{
+    margin: .2rem 0;
+    list-style: disc;
+}
+.card__technologies
+{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.card__technologies .technologies__item
+{
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+.card__technologies .technologies__item .technologies__logo
+{
+    height: 2rem;
+    width: 2rem;
+}
+.card__buttons
+{
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.btn__card--preview
+{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background-color: var(--secondary-bg-color);
+    border: .1rem solid var(--secondary-border-color);
+    border-radius: 1px;
+    flex: 1;
+}
+.btn__card--preview:hover
+{
+    cursor: pointer;
+}
+.btn__card--preview:hover i
+{
+    scale: 1.3;
+}
+.btn__card--preview span
+{
+    font-size: 1.15rem;
+    color: var(--primary-color);
+}
+.btn__card--preview i
+{
+    color: var(--primary-color);
+}
+.btn__card--repository
+{
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border: .1rem solid var(--primary-border-color);
+    border-radius: 10rem;
+    flex: 1;
+}
+.btn__card--repository span
+{
+    font-size: 1.15rem;
+    color: var(--primary-color);
+}
+.btn__card--repository:hover
+{
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+.btn__card--repository:hover i,
+.btn__card--repository:hover span
+{
+    color: var(--primary-bg-color);
+}
+.btn__repositories
+{
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border: .1rem solid var(--primary-border-color);
+    border-radius: 10rem;
+    gap: 1rem;
+    cursor: pointer;
+}
+.btn__repositories:hover span,
+.btn__repositories:hover i
+{
+    color: var(--secondary-color)
+}
+.btn__repositories span,
+.btn__repositories i
+{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+/* About Container */
+.about
+{
+    width: 100%;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about__content1
+{
+    min-height: 81.5vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.about__profile-picture
+{
+    height: 15rem;
+    width: 15rem;
+    border: 3px solid var(--secondary-border-color);
+    border-radius: 50%;
+}
+.about__description
+{
+    margin: 1rem;
+}
+.about__description h2
+{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.about__description p
+{
+    text-align: left;
+    margin-bottom: 1rem;
+}
+.about__list
+{
+    margin: 1rem;
+}
+.about__list li
+{
+    list-style: decimal;
+}
+.about__button
+{
+    padding: 1rem 1.5rem;
+    border: .1rem solid var(--primary-border-color);
+    border-radius: 10rem;
+    cursor: pointer;
+}
+.about__button:hover
+{
+    background-color: #FFF;
+}
+.about__button:hover span,
+.about__button:hover i
+{
+    color: #000;
+}
+.about__content2
+{
+    min-height: 81.5vh;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content2__col1
+{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.content2__col1 h3
+{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.col1__row1
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+/* Experiencias Profissionais */
+.col1__row2
+{
+    display: flex;
+    flex-direction: column;
+}
+.company__accordion
+{
+    display: flex;
+    flex-direction: column;
+}
+.accordion__header
+{
+    padding: .5rem;
+    background-color: var(--secondary-bg-color);
+    border: .1rem solid var(--secondary-border-color);
+}
+.accordion__body
+{
+    padding: .5rem;
+    border: .1rem solid var(--secondary-border-color);
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+}
+.job__description
+{
+    margin-bottom: .5rem;
+}
+.about2__list .about__item
+{
+    margin-left: 1rem;
+    list-style: disc;
+}
+.content2__col2
+{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.content2__col2 h3
+{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+/* Contact Section */
+.contact
+{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-bg-color);
+    border-bottom: 1px solid var(--secondary-border-color);
+}
+.contact h2
+{
+    margin-bottom: 2rem;
+}
+.menu--social a
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.menu--social a:hover i,
+.menu--social a:hover span
+{
+    color: var(--secondary-color);
+}
+.mail__button:hover span
+{
+    color: var(--secondary-color);
+}
+/* Footer Container */
+.footer__container
+{
+    width: 100%;
+    padding: 3rem 0 3rem;
+    display: flex;
+    justify-content: center;
+    
+}
+/* Mobile Responsiviness */
+@media (max-width: 320px)
+{
+    h1
+    {
+        font-size: 1.75rem;
+    }
+    h2
+    {
+        font-size: 1.25rem;
+    }
+    /* Home Technologies */
+    .technologies__item
+    {
+        height: 4rem;
+        width: 4rem;
+    }
+    .technologies__logo
+    {
+        height: 2.5rem;
+        width: 2.25rem;
+    }
+    /* Projects Section */
+    .card__image
+    {
+        font-size: 8rem;
+        padding: .75rem 4rem;
+    }
+    .card__body
+    {
+        width: 18.4rem;
+    }
+    .btn__card--preview
+    {
+        padding: .75rem 1rem;
+    }
+    .btn__card--preview span
+    {
+        font-size: 1rem;
+    }
+    .btn__card--repository
+    {
+        padding: .75rem 1rem;
+    }
+    .btn__card--repository span
+    {
+        font-size: 1rem;
+    }
+    .btn__repositories span,
+    .btn__repositories i
+    {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 376px)
+{
+    /* Logo Div */
+    .logo, .logo__span
+    {
+        font-size: 1.75rem;
+    }
+    /* Home Section */
+    .home__content p
+    {
+        text-align: center;
+    }
+    .menu--social
+    {
+        margin-top: 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media (max-width: 426px)
+{
+    .home__technologies h2
+    {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 768px)
+{
+    /* Desktop Nav Bar */
+    .menu--desktop
+    {
+        display: none;
+    }
+}
+/* Desktop Responsiviness */
+@media (min-width: 769px)
+{
+    /* Home Section */
+    .home
+    {
+        min-height: 91.5vh;
+    }
+    .home__content
+    {
+        padding: 0 3rem;
+    }
+    .home__content h1
+    {
+        font-size: 4rem;
+    }
+    .home__content p
+    {
+        font-size: 1.5rem;
+    }
+    .home__content .social__icon
+    {
+        font-size: 1.75rem;
+    }
+    /* Home Technologies */
+    .home__technologies
+    {
+        height: 30vh;
+        width: 100%;
+        flex-direction: row;
+        /* padding: 5rem 3rem; */
+    }
+    .home__technologies h2
+    {
+        margin: 2rem;
+        flex: 2;
+        align-self: flex-start;
+        justify-content: flex-start;
+        font-size: 2rem;
+    }
+    .technologies__list
+    {
+        margin: 2rem;
+        flex: 1;
+        align-self: flex-end;
+        justify-content: flex-end;
+    }
+    /* Projects Section */
+    .projects__card
+    {
+        width: 90%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .card__cover
+    {
+        width: 40%;
+    }
+    .card__body
+    {
+        width: 60%;
+        padding: 1rem;
+        border: 3px solid var(--primary-border-color);
+        border-radius: 10px;
+    }
+    .card__title
+    {
+        text-align: left;
+    }
+    .card__technologies
+    {
+        justify-content: flex-start;
+    }
+    .projects__card.card--reverse
+    {
+        flex-direction: row-reverse;
+    }
+    .card--reverse .card__cover
+    {
+        justify-content: center;
+    }
+    /* About Section */
+    .about__content2
+    {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .content2__col1,
+    .content2__col2
+    {
+        width: 50%;
+    }
+    .content2__col1 h3,
+    .content2__col2 h3
+    {
+        text-align: left;
+    }
+    /* Contact Section */
+    .menu--social a
+    {
+        flex-direction: row;
+        gap: .5rem;
+    }
+    /* Mobile Menu */
+    .nav--mobile
+    {
+        display: none;
+    }
+}
+@media (min-width: 1025px)
+{
+    /* Home Content */
+    .home__content
+    {
+        padding: 0 5rem;
+    }
+    /* Home Technologies */
+    .home__technologies h2
+    {
+        text-align: left;
+    }
+}
